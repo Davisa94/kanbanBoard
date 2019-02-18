@@ -23,10 +23,10 @@ var cards = [
   {
    leftButton: 'TRUE',
    text: 'First Card',
-   rightButton: 'R'
+   rightButton: 'FALSE'
   },
   {
-    leftButton: 'L',
+    leftButton: 'TRUE',
     text: 'Second Card',
     rightButton: 'R'
    },
@@ -48,10 +48,21 @@ class Board extends Component {
     super();
     var classname = classN;
   }
+  renderCard(card){
+    if(card.leftButton=="TRUE" && card.rightButton=="FALSE")
+    {
+      return <div className="card" key={card.text}><button class = "card-button" type="button" name="button">L</button>{card.leftButton}{card.text}</div>
+    }
+    else{
+      return <div className="card" key={card.text}>{card.leftButton}{card.text}</div>
+    };
+
+  }
 
   render(){
-    const listItems = cards.map((card)=>
-    <div className="card" key={card.text}>if(card.leftButton == "TRUE"){<button class = "card-button" type="button" name="button">L</button>};{card.leftButton}{card.text}</div>);
+    const listItems = cards.map((card)=> renderCard(card));
+    
+    
     return(
       <div className="column">
         {listItems}
