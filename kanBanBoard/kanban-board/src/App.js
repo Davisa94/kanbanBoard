@@ -28,7 +28,7 @@ var cards = [
   {
     leftButton: 'TRUE',
     text: 'Second Card',
-    rightButton: 'R'
+    rightButton: 'FALSE'
    },
    {
     leftButton: 'L',
@@ -54,13 +54,13 @@ class Board extends Component {
       return <div className="card" key={card.text}><button class = "card-button" type="button" name="button">L</button>{card.leftButton}{card.text}</div>
     }
     else{
-      return <div className="card" key={card.text}>{card.leftButton}{card.text}</div>
+      return <div className="card" key={card.text}>{card.text}</div>
     };
 
   }
 
   render(){
-    const listItems = cards.map((card)=> renderCard(card));
+    const listItems = cards.map((card)=> this.renderCard(card));
     
     
     return(
