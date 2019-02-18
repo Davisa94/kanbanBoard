@@ -21,7 +21,7 @@ class Card extends Component{
 
 var cards = [
   {
-   leftButton: '<button class = "card-button" type="button" name="button"><</button>',
+   leftButton: 'TRUE',
    text: 'First Card',
    rightButton: 'R'
   },
@@ -51,7 +51,7 @@ class Board extends Component {
 
   render(){
     const listItems = cards.map((card)=>
-    <div className="card" key={card.text}>{card.text}</div>);
+    <div className="card" key={card.text}>if(card.leftButton == "TRUE"){<button class = "card-button" type="button" name="button"><</button></button>};{card.leftButton}{card.text}</div>);
     return(
       <div className="column">
         {listItems}
@@ -78,6 +78,7 @@ class mainBoard extends Component {
     <Board className={board.classname}></Board>);
     return(
       <div className="main">
+        <h1>Test</h1>
         {listItems}
       </div>
     )
