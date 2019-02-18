@@ -63,10 +63,10 @@ class Board extends Component {
 var boards =
 [
   {
-    board: new Board("column green")
+    classname: "column green"
   },
   {
-    board: new Board("column blue")
+    classname: "column green"
   }
 ]
 
@@ -75,7 +75,7 @@ class mainBoard extends Component {
 
   render(){
     const listItems = boards.map((board)=>
-    <div className={board.classname}></div>);
+    <Board className={board.classname}></Board>);
     return(
       <div className="main">
         {listItems}
@@ -89,7 +89,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main">
-        <Board></Board>
+        <mainBoard></mainBoard>
+        <Board className="column green"></Board>
         </div>
       </div>
     );
