@@ -51,7 +51,7 @@ class Board extends Component {
   renderCard(card){
     if(card.leftButton=="TRUE" && card.rightButton=="FALSE")
     {
-      return <div className="card" key={card.text}><button class = "card-button" type="button" name="button">L</button>{card.leftButton}{card.text}</div>
+      return <div className="card" key={card.text}><button class = "card-button" type="button" name="button">L</button>{card.text}</div>
     }
     else{
       return <div className="card" key={card.text}>{card.text}</div>
