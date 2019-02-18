@@ -75,7 +75,7 @@ class mainBoard extends Component {
 
   render(){
     const listItems = boards.map((board)=>
-    <div className={board.props.classname}></div>);
+    <div className={board.classname}></div>);
     return(
       <div className="main">
         {listItems}
@@ -89,7 +89,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main">
-        <mainBoard></mainBoard>
+        <Board></Board>
         </div>
       </div>
     );
