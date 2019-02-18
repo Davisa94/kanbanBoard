@@ -44,7 +44,8 @@ var cards = [
 ];
 
 class Board extends Component {
-  constructor(classN){
+  constructor(classN="column"){
+    super();
     var classname = classN;
   }
 
