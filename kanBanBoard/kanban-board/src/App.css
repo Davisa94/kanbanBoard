@@ -23,6 +23,61 @@
   color: #61dafb;
 }
 
+.main{
+  display: flex;
+}
+
+.main div{
+  border: 1px #39a103 solid;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 10px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.column{
+  flex:1;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 10px;
+}
+
+.card{
+  flex-flow: row;
+  text-align: center;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: 1px #000000 solid;
+  background-color: rgb(241, 241, 241);
+}
+.card-button{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.heading{
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+}
+
+.green{
+  border: 1px #153e00 solid;
+  background-color: rgba(0, 255, 24, 0.65);
+}
+
+.blue{
+  border: 10px #00123e solid;
+  background-color: rgba(0, 73, 255, 0.65);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
