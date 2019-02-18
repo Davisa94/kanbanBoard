@@ -51,7 +51,7 @@ class Board extends Component {
 
   render(){
     const listItems = cards.map((card)=>
-    <div className="card" key={card.text}>if(card.leftButton == "TRUE"){<button class = "card-button" type="button" name="button"><</button></button>};{card.leftButton}{card.text}</div>);
+    <div className="card" key={card.text}>if(card.leftButton == "TRUE"){<button class = "card-button" type="button" name="button">L</button>};{card.leftButton}{card.text}</div>);
     return(
       <div className="column">
         {listItems}
